@@ -3,7 +3,7 @@
 // @namespace   noplanman
 // @description Allows you to practice any skill and adds a few niceties to the UI.
 // @include     https://www.duolingo.com/
-// @version     1.0
+// @version     1.1
 // @author      Armando Lüscher
 // @oujs:author noplanman
 // @copyright   2016 Armando Lüscher
@@ -36,7 +36,7 @@ DU.loadVariables = function() {
   DU.lang = DU.user.language_data[DU.user.learning_language];
   DU.skills = {};
   jQuery.each(DU.lang.skills.models, function(i, skill) {
-    DU.skills[skill.attributes.new_index] = skill.attributes;
+    DU.skills[skill.attributes.short] = skill.attributes;
   });
   DU.log('Variables loaded');
 };
@@ -49,9 +49,11 @@ DU.unlockTree = function() {
   jQuery('.skill-tree-row:not(.bonus-row, .row-shortcut) .skill-badge-small.locked').each(function() {
     var $skillItemOld = jQuery(this).removeClass('locked').addClass('skill-item');
 
-    // Get just the id number using regex.
-    var skillIndex = $skillItemOld.find('.skill-icon-image').attr('class').match(/\d+/g)[0];
-    var skill = DU.skills[skillIndex];
+    // Get just the text of the skill (without the number of excercises)
+    var skillNameShort = $skillItemOld.find('.skill-badge-name')
+      .clone().children().remove()
+      .end().text().trim();
+    var skill = DU.skills[skillNameShort];
 
     $skillItem = jQuery('<a/>', {
       'html'       : $skillItemOld.html(),
