@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Duolingo Unlocker
 // @namespace   noplanman
-// @description Allows you to practice any skill and adds a few niceties to the UI.
+// @description ABANDONED Allows you to practice any skill and adds a few niceties to the UI.
 // @include     https://www.duolingo.com/
 // @version     1.1
 // @author      Armando Lüscher

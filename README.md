@@ -1,7 +1,9 @@
+**ABANDONED since Duolingo website redesign in 2017!**
+
 # Duolingo-Unlocker
 Allows you to practice any skill and adds a few niceties to the UI
 
-##Installation
+## Installation
 
 Duolingo Unlocker can be installed on a **PC**, or a **Mac**.
 Simply choose the plugin that corresponds to your web browser below and download the script, as easy as that!
@@ -18,7 +20,7 @@ Simply choose the plugin that corresponds to your web browser below and download
   - [Get it on GreasyFork](https://greasyfork.org/en/scripts/22147-duolingo-unlocker/code/Duolingo%20Unlocker.user.js)
   - [Get it on GitHub](https://raw.githubusercontent.com/noplanman/Duolingo-Unlocker/master/Duolingo_Unlocker.user.js)
 
-##Details
+## Details
 
 This script visually unlocks all skills in a language tree, making it possible to practice and complete any skill you want.
 NOTE: As a side-effect of completing a newly available (now unlocked) skill, the tree up to that skill is permanently unlocked by Duolingo! So even if this script is disabled, all skills before the completed one will become available.
